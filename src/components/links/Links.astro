@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import LinkButton from "./LinkButton.astro";
-import LinkCard from "./LinkCard.astro";
 import Card from "../ui/card/Card.astro";
 import CardContent from "../ui/card/CardContent.astro";
+import ramzcoder from "../../assets/ramzcoder.webp";
 ---
 
 <div
@@ -12,11 +12,11 @@ import CardContent from "../ui/card/CardContent.astro";
   <Card>
     <CardContent class="items-center space-y-6">
       <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/telegram-peer-photo-size-2-5397652905063999223-1-0-0.jpg-scidbgqaxhPlLx8AnMQGmzsEbIXpIE.jpeg"
-        alt="Profile picture"
-        width={120}
-        height={120}
-        class="rounded-full object-cover"
+        width={320}
+        height={320}
+        src={ramzcoder}
+        alt="ramzcoder"
+        class="rounded-full object-cover w-40"
         priority
       />
 
