@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import Card from "../ui/card/Card.astro";
+import CardContent from "../ui/card/CardContent.astro";
+
+const { title, description, domain, href, thumbnail, platform } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" class="block group">
+  <Card className="group-hover:bg-zinc-700 transition-colors">
+    <Image
+      src={thumbnail}
+      alt={`${platform} thumbnail`}
+      width={320}
+      height={160}
+      class="w-full object-cover"
+    />
+    <CardContent>
+      <div class="flex justify-between items-start gap-5">
+        <h3 class="font-bold text-lg">{title}</h3>
+        <span class="text-xs text-zinc-400 my-2">{domain}</span>
+      </div>
+      <p class="text-sm text-zinc-300">{description}</p>
+    </CardContent>
+  </Card>
+</a>

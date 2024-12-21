@@ -1,0 +1,9 @@
+---
+import { twMerge } from "tailwind-merge";
+
+const { class: className } = Astro.props;
+---
+
+<div class={twMerge("py-8 px-6 flex flex-col space-y-3", className)}>
+  <slot />
+</div>

@@ -1,0 +1,17 @@
+---
+import { twMerge } from "tailwind-merge";
+import Button from "../ui/button/Button.astro";
+
+const { href, text, class: className } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={twMerge("block", className)}
+>
+  <Button>
+    <span>{text}</span>
+  </Button>
+</a>
